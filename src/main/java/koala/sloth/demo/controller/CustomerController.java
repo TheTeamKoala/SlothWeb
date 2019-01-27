@@ -28,10 +28,19 @@ public class CustomerController {
         return customerService.findCustomerbyId(id);
     }
 
+    @GetMapping("/type/{type}")
+    public List<Customer> getCustomerByType(@PathVariable  String type){
+        return customerService.findCustomerbyType(type);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Customer saveCustomer(@RequestBody  Customer customer){
         return customerService.saveCustomer(customer);
     }
 
+    @DeleteMapping("/del/{id}")
+    public void delCustomer(@PathVariable  Long id){
+        customerService.deleteCustomer(id);
+    }
 }

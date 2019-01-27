@@ -16,21 +16,21 @@ public class bootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("Loading customer data");
+       System.out.println("Loading customer data");
 
         Customer c1 = new Customer();
-        c1.setFirstName("malik");
-        c1.setLastName("turhan");
+        c1.setFirstDate("21.01.2019");
+        c1.setType("yogurt");
         customerRepository.save(c1);
 
         Customer c2 = new Customer();
-        c2.setFirstName("yunus");
-        c2.setLastName("kep");
+        c2.setFirstDate("23.01.2019");
+        c2.setType("kola");
         customerRepository.save(c2);
 
         Customer c3 = new Customer();
-        c3.setFirstName("omer");
-        c3.setLastName("unal");
+        c3.setFirstDate("25.01.2019");
+        c3.setType("bal");
         customerRepository.save(c3);
 
         System.out.println("Customer Saved : "+customerRepository.count());
