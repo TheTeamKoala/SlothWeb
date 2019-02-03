@@ -13,4 +13,5 @@ public interface CustomerRepository extends JpaRepository<Customer,Long> {
     @Query("delete from Customer c where c.id=?1")
     void deleteCustomerById(Long id);
 
+
 }

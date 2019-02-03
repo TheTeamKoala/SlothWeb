@@ -2,9 +2,11 @@ package koala.sloth.demo.controller;
 
 import koala.sloth.demo.domain.Customer;
 import koala.sloth.demo.service.CustomerService;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.PostUpdate;
 import java.util.List;
 
 @RestController
@@ -14,6 +16,8 @@ public class CustomerController {
     private final CustomerService customerService;
 
     public static final String BASE_URL = "/api/v1/customers";
+
+
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }
@@ -31,6 +35,23 @@ public class CustomerController {
     @GetMapping("/type/{type}")
     public List<Customer> getCustomerByType(@PathVariable  String type){
         return customerService.findCustomerbyType(type);
+    }
+
+    @Modifying
+    @GetMapping("/update/add/{type}")
+    public  void addCustomerToFrige(@PathVariable String type){
+       customerService.addCustomerToFridge(type);
+    }
+
+    @Modifying
+    @GetMapping("/update/del/{type}")
+    public  void deleteCustomerInFrige(@PathVariable String type){
+        customerService.deleteCustomerInFridge(type);
+    }
+
+    @GetMapping("/fridge")
+    public List<Customer> getCustomerByType(){
+        return customerService.getAllCustomersFromFridge();
     }
 
     @PostMapping

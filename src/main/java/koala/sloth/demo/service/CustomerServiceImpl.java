@@ -16,6 +16,34 @@ public class CustomerServiceImpl implements CustomerService {
         this.customerRepository = customerRepository;
     }
 
+
+    @Override
+    public void addCustomerToFridge(String type) {
+        List<Customer> customers =  findCustomerbyType(type);
+        customers.get(0).setInTheFridge(true);
+        customerRepository.save(customers.get(0));
+    }
+
+    @Override
+    public  List<Customer> getAllCustomersFromFridge() {
+        List<Customer> customers = findAllCustomers();
+        List<Customer> typeList = new ArrayList<>();
+        for (Customer c: customers) {
+            if(c.getInTheFridge()){
+                typeList.add(c);
+            }
+        }
+        return typeList;
+    }
+
+    @Override
+    public void deleteCustomerInFridge(String type) {
+        List<Customer> customers =  findCustomerbyType(type);
+        customers.get(0).setInTheFridge(false);
+        customerRepository.save(customers.get(0));
+    }
+
+
     @Override
     public Customer findCustomerbyId(Long id) {
         return customerRepository.findById(id).get();
