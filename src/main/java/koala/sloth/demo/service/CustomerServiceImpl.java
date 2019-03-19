@@ -18,52 +18,13 @@ public class CustomerServiceImpl implements CustomerService {
 
 
     @Override
-    public void addCustomerToFridge(String type) {
-        List<Customer> customers =  findCustomerbyType(type);
-        customers.get(0).setInTheFridge(true);
-        customerRepository.save(customers.get(0));
-    }
-
-    @Override
-    public  List<Customer> getAllCustomersFromFridge() {
-        List<Customer> customers = findAllCustomers();
-        List<Customer> typeList = new ArrayList<>();
-        for (Customer c: customers) {
-            if(c.getInTheFridge()){
-                typeList.add(c);
-            }
-        }
-        return typeList;
-    }
-
-    @Override
-    public void deleteCustomerInFridge(String type) {
-        List<Customer> customers =  findCustomerbyType(type);
-        customers.get(0).setInTheFridge(false);
-        customerRepository.save(customers.get(0));
-    }
-
-
-    @Override
-    public Customer findCustomerbyId(Long id) {
+    public Customer findCustomerbyId(Integer id) {
         return customerRepository.findById(id).get();
     }
 
     @Override
-    public void deleteCustomer(Long id) {
+    public void deleteCustomer(Integer id) {
         customerRepository.deleteCustomerById(id);
-    }
-
-    @Override
-    public List<Customer> findCustomerbyType(String type) {
-        List<Customer> customers =  customerRepository.findAll();
-        List<Customer> typeList = new ArrayList<>();
-        for (Customer c: customers) {
-            if(c.getType().equals(type)){
-                typeList.add(c);
-            }
-        }
-        return typeList;
     }
 
     @Override
@@ -72,7 +33,52 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public List<Customer> findCustomerbyCategory(String name) {
+        List<Customer> customers =  customerRepository.findAll();
+        List<Customer> typeList = new ArrayList<>();
+        for (Customer c: customers) {
+            if(c.getNAME().equals(name)){
+                typeList.add(c);
+            }
+        }
+        return typeList;
+    }
+
+
+    @Override
     public Customer saveCustomer(Customer customer) {
         return customerRepository.save(customer);
     }
+
+
+    @Override
+    public void addCustomerToFridge(String type) {
+        List<Customer> customers =  findCustomerbyCategory(type);
+        customers.get(0).setInTheFridge(1);
+        customerRepository.save(customers.get(0));
+    }
+
+
+    @Override
+    public void deleteCustomerInFridge(String type) {
+        List<Customer> customers =  findCustomerbyCategory(type);
+        customers.get(0).setInTheFridge(0);
+        customerRepository.save(customers.get(0));
+    }
+
+
+    @Override
+    public  List<Customer> getAllCustomersFromFridge() {
+        List<Customer> customers = findAllCustomers();
+        List<Customer> typeList = new ArrayList<>();
+        for (Customer c: customers) {
+            if(c.getInTheFridge()==1){
+                typeList.add(c);
+            }
+        }
+        return typeList;
+    }
+
+
+
 }

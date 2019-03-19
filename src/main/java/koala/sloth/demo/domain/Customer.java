@@ -11,12 +11,16 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
-    private  String type;
-    private  String firstDate;
-    private Boolean inTheFridge;
-    private int fiyat;
+    private Integer ID;
+    private  String NAME;
+    private  String BRAND;
+    private  String CATEGORY;
+    private  float PRICE;
+    private  String PRICE_UNIT;
+    private  String PHYSICAL_UNIT;
+    private  Long FIRST_DATE;
+    private Integer inTheFridge;
 
 
 }

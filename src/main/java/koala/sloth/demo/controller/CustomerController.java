@@ -15,7 +15,7 @@ public class CustomerController {
 
     private final CustomerService customerService;
 
-    public static final String BASE_URL = "/api/v1/customers";
+    static final String BASE_URL = "/product";
 
 
     public CustomerController(CustomerService customerService) {
@@ -28,13 +28,13 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public Customer getCustomerById(@PathVariable  Long id){
+    public Customer getCustomerById(@PathVariable  Integer id){
         return customerService.findCustomerbyId(id);
     }
 
-    @GetMapping("/type/{type}")
-    public List<Customer> getCustomerByType(@PathVariable  String type){
-        return customerService.findCustomerbyType(type);
+    @GetMapping("/name/{name}")
+    public List<Customer> getCustomerByType(@PathVariable  String name){
+        return customerService.findCustomerbyCategory(name);
     }
 
     @Modifying
@@ -61,7 +61,7 @@ public class CustomerController {
     }
 
     @DeleteMapping("/del/{id}")
-    public void delCustomer(@PathVariable  Long id){
+    public void delCustomer(@PathVariable  Integer id){
         customerService.deleteCustomer(id);
     }
 }

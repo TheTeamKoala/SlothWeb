@@ -22,57 +22,24 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order findOrderbyId(Long id) {
+    public Order findOrderbyId(Integer id) {
         return orderRepository.findById(id).get();
     }
 
     @Override
-    public Customer delWithCustomer(Long id ,Long customer) {
-        Order order = orderRepository.findById(id).get();
-        order.getOrder_list().remove(customer);
-            orderRepository.save(order);
-            return customerService.findCustomerbyId(customer);
+    public void delOrder(Integer id) {
+        orderRepository.deleteById(id);
     }
 
     @Override
-    public List<Customer> getOrdersCustomers(Long id) {
-        Order order = orderRepository.findById(id).get();
-        List<Customer> customers = new ArrayList<>();
-            for (Long l : order.getOrder_list()){
-                Customer c = customerService.findCustomerbyId(l);
-                customers.add(c);
-            }
-        return customers;
+    public Order saveOrder(Order order) {
+        return orderRepository.save(order);
     }
 
     @Override
-    public List<Order> findAllCustomers() {
+    public List<Order> findAllOrder() {
         return orderRepository.findAll();
     }
 
-    @Override
-    public List<Order> findOrderByCystomer(Customer customer) {
-        List<Order> order = orderRepository.findAll();
-        List<Order> typeList = new ArrayList<>();
-        for (Order c: order) {
-            if(c.getOrder_list().equals(customer)){
-                typeList.add(c);
-            }
-        }
-        return typeList;
-    }
 
-    @Override
-    public Customer addProductToOrder(Long id ,Long customer) {
-        Order order = orderRepository.findById(id).get();
-            order.getOrder_list().add(customer);
-            orderRepository.save(order);
-        return customerService.findCustomerbyId(customer);
-    }
-
-
-    @Override
-    public void delOrder(Long id) {
-         orderRepository.deleteById(id);
-    }
 }

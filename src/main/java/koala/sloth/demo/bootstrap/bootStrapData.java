@@ -22,31 +22,44 @@ public class bootStrapData implements CommandLineRunner {
        System.out.println("Loading customer data");
 
         Customer c1 = new Customer();
-        c1.setFirstDate("21.01.2019");
-        c1.setType("yogurt");
-        c1.setInTheFridge(false);
-        c1.setFiyat(5);
+        c1.setNAME("yogurt");
+        c1.setBRAND("sutas");
+        c1.setCATEGORY("Hayvansal");
+        c1.setInTheFridge(0);
+        c1.setPRICE(5);
+        c1.setPRICE_UNIT("TL");
+        c1.setPHYSICAL_UNIT("KG");
+        c1.setFIRST_DATE((long) 222222222);
         customerRepository.save(c1);
 
         Customer c2 = new Customer();
-        c2.setFirstDate("23.01.2019");
-        c2.setType("kola");
-        c2.setInTheFridge(false);
-        c2.setFiyat(10);
+        c2.setNAME("kola");
+        c2.setBRAND("pepsi");
+        c2.setCATEGORY("icecek");
+        c2.setInTheFridge(0);
+        c2.setPRICE(3);
+        c2.setPRICE_UNIT("TL");
+        c2.setPHYSICAL_UNIT("Birim");
+        c2.setFIRST_DATE((long) 3333333);
         customerRepository.save(c2);
 
         Customer c3 = new Customer();
-        c3.setFirstDate("25.01.2019");
-        c3.setType("bal");
-        c3.setInTheFridge(false);
-        c3.setFiyat(8);
+        c3.setNAME("bal");
+        c3.setBRAND("balparmak");
+        c3.setCATEGORY("Hayvansal");
+        c3.setInTheFridge(1);
+        c3.setPRICE(20);
+        c3.setPRICE_UNIT("TL");
+        c3.setPHYSICAL_UNIT("KG");
+        c3.setFIRST_DATE((long) 4444444);
         customerRepository.save(c3);
 
         System.out.println("Customer Saved : "+customerRepository.count());
 
         Order o1 = new Order();
-        o1.setOrderFinish(false);
-        o1.getOrder_list().add(c1.getId());
+        o1.setPRODUCT_ID(1);
+        o1.setQUANTITY(3);
+        o1.setDATE((long) 333333);
         orderRepository.save(o1);
     }
 }

@@ -6,21 +6,22 @@ import org.springframework.data.jpa.repository.Modifying;
 import java.util.List;
 
 public interface CustomerService {
-    Customer findCustomerbyId(Long id);
+    Customer findCustomerbyId(Integer id);
 
-    List<Customer> findCustomerbyType(String type);
+    void deleteCustomer(Integer id);
 
     List<Customer> findAllCustomers();
 
+    List<Customer> findCustomerbyCategory(String NAME);
+
     Customer saveCustomer(Customer customer);
 
-    void deleteCustomer(Long id);
+    @Modifying
+    void addCustomerToFridge(String CATEGORY);
 
     @Modifying
-    void addCustomerToFridge(String type);
-
-    @Modifying
-    void deleteCustomerInFridge(String type);
+    void deleteCustomerInFridge(String CATEGORY);
 
     List<Customer> getAllCustomersFromFridge();
+
 }

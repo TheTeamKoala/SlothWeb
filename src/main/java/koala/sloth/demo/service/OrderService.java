@@ -8,17 +8,13 @@ import java.util.List;
 public interface OrderService {
 
 
-    Order findOrderbyId(Long id);
+    Order findOrderbyId(Integer id);
 
-    Customer addProductToOrder(Long id ,Long customer);
+    void delOrder(Integer id);
 
-    List<Order> findOrderByCystomer(Customer customer);
+    Order saveOrder(Order order);
 
-    void delOrder(Long id);
+    List<Order> findAllOrder();
 
-    Customer delWithCustomer(Long id ,Long customer);
 
-    List<Customer> getOrdersCustomers(Long id);
-
-    List<Order> findAllCustomers();
 }
