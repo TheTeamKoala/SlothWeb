@@ -21,7 +21,7 @@ public class bootStrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
        System.out.println("Loading customer data");
 
-        Customer c1 = new Customer();
+        /*Customer c1 = new Customer();
         c1.setNAME("yogurt");
         c1.setBRAND("sutas");
         c1.setCATEGORY("Hayvansal");
@@ -60,6 +60,6 @@ public class bootStrapData implements CommandLineRunner {
         o1.setPRODUCT_ID(1);
         o1.setQUANTITY(3);
         o1.setDATE((long) 333333);
-        orderRepository.save(o1);
+        orderRepository.save(o1);*/
     }
 }
