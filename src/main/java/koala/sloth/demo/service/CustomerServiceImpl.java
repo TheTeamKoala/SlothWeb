@@ -5,6 +5,7 @@ import koala.sloth.demo.respository.CustomerRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -55,6 +56,9 @@ public class CustomerServiceImpl implements CustomerService {
     public void addCustomerToFridge(String type) {
         List<Customer> customers =  findCustomerbyCategory(type);
         customers.get(0).setInTheFridge(1);
+        Date date = new Date();
+        long firstDate=date.getTime();
+        customers.get(0).setFIRST_DATE(firstDate);
         customerRepository.save(customers.get(0));
     }
 
@@ -63,6 +67,7 @@ public class CustomerServiceImpl implements CustomerService {
     public void deleteCustomerInFridge(String type) {
         List<Customer> customers =  findCustomerbyCategory(type);
         customers.get(0).setInTheFridge(0);
+        customers.get(0).setFIRST_DATE((long) 1551615240120L);
         customerRepository.save(customers.get(0));
     }
 

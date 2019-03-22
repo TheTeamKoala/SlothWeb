@@ -539,27 +539,27 @@ public class bootStrapData implements CommandLineRunner {
         c47.setFIRST_DATE((long) 1551615240120L);
         customerRepository.save(c47);
 
-        Customer c47 = new Customer();
-        c47.setNAME("shampoo");
-        c47.setBRAND("HS");
-        c47.setCATEGORY("Cleaning");
-        c47.setInTheFridge(0);
-        c47.setPRICE((float) 7.25);
-        c47.setPRICE_UNIT("TL");
-        c47.setPHYSICAL_UNIT("piece");
-        c47.setFIRST_DATE((long) 1551615240120L);
-        customerRepository.save(c47);
-
         Customer c48 = new Customer();
-        c48.setNAME("toiletpaper");
+        c48.setNAME("shampoo");
         c48.setBRAND("HS");
         c48.setCATEGORY("Cleaning");
         c48.setInTheFridge(0);
-        c48.setPRICE((float) 8.25);
+        c48.setPRICE((float) 7.25);
         c48.setPRICE_UNIT("TL");
         c48.setPHYSICAL_UNIT("piece");
         c48.setFIRST_DATE((long) 1551615240120L);
         customerRepository.save(c48);
+
+        Customer c49 = new Customer();
+        c49.setNAME("toiletpaper");
+        c49.setBRAND("HS");
+        c49.setCATEGORY("Cleaning");
+        c49.setInTheFridge(0);
+        c49.setPRICE((float) 8.25);
+        c49.setPRICE_UNIT("TL");
+        c49.setPHYSICAL_UNIT("piece");
+        c49.setFIRST_DATE((long) 1551615240120L);
+        customerRepository.save(c49);
 
 
         System.out.println("Customer Saved : "+customerRepository.count());
