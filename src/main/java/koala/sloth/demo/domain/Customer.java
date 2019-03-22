@@ -4,6 +4,7 @@ package koala.sloth.demo.domain;
 import lombok.*;
 
 import javax.persistence.*;
+import java.sql.Blob;
 
 @Data
 @Entity
@@ -21,6 +22,6 @@ public class Customer {
     private  String PHYSICAL_UNIT;
     private  Long FIRST_DATE;
     private Integer inTheFridge;
-
+    private Blob image;
 
 }
