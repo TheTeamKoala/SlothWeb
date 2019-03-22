@@ -22,6 +22,5 @@ public class Customer {
     private  String PHYSICAL_UNIT;
     private  Long FIRST_DATE;
     private Integer inTheFridge;
-    private Blob image;
 
 }
