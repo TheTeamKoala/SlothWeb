@@ -55,11 +55,14 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void addCustomerToFridge(String type) {
         List<Customer> customers =  findCustomerbyCategory(type);
-        customers.get(0).setInTheFridge(1);
+        int frid = customers.get(0).getInTheFridge();
         Date date = new Date();
         long firstDate=date.getTime();
-        customers.get(0).setFIRST_DATE(firstDate);
-        customerRepository.save(customers.get(0));
+        if(frid==0){
+            customers.get(0).setFIRST_DATE(firstDate);
+            customers.get(0).setInTheFridge(1);
+            customerRepository.save(customers.get(0));
+        }
     }
 
 

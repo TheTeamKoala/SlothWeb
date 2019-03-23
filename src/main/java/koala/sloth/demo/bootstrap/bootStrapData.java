@@ -410,7 +410,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c36 = new Customer();
         c36.setNAME("hazelnut");
         c36.setBRAND("");
-        c36.setCATEGORY("Junk Food");
+        c36.setCATEGORY("Nut");
         c36.setInTheFridge(0);
         c36.setPRICE((float) 15.00);
         c36.setPRICE_UNIT("TL");
@@ -421,7 +421,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c37 = new Customer();
         c37.setNAME("peanut");
         c37.setBRAND("");
-        c37.setCATEGORY("Junk Food");
+        c37.setCATEGORY("Nut");
         c37.setInTheFridge(0);
         c37.setPRICE((float) 15.25);
         c37.setPRICE_UNIT("TL");
