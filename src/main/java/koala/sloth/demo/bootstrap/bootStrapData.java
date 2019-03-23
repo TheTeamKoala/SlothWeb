@@ -80,7 +80,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c6 = new Customer();
         c6.setNAME("marul");
         c6.setBRAND("");
-        c6.setCATEGORY("Vegetables");
+        c6.setCATEGORY("Vegetable");
         c6.setInTheFridge(0);
         c6.setPRICE((float) 1.50);
         c6.setPRICE_UNIT("TL");
@@ -91,7 +91,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c7 = new Customer();
         c7.setNAME("lahana");
         c7.setBRAND("");
-        c7.setCATEGORY("Vegetables");
+        c7.setCATEGORY("Vegetable");
         c7.setInTheFridge(0);
         c7.setPRICE((float) 2.50);
         c7.setPRICE_UNIT("TL");
@@ -102,7 +102,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c8 = new Customer();
         c8.setNAME("turp");
         c8.setBRAND("");
-        c8.setCATEGORY("Vegetables");
+        c8.setCATEGORY("Vegetable");
         c8.setInTheFridge(0);
         c8.setPRICE((float) 3.50);
         c8.setPRICE_UNIT("TL");
@@ -113,7 +113,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c9 = new Customer();
         c9.setNAME("patlican");
         c9.setBRAND("");
-        c9.setCATEGORY("Vegetables");
+        c9.setCATEGORY("Vegetable");
         c9.setInTheFridge(0);
         c9.setPRICE((float) 1.50);
         c9.setPRICE_UNIT("TL");
@@ -135,7 +135,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c11 = new Customer();
         c11.setNAME("salatalik");
         c11.setBRAND("");
-        c11.setCATEGORY("Vegetables");
+        c11.setCATEGORY("Vegetable");
         c11.setInTheFridge(0);
         c11.setPRICE((float) 1.25);
         c11.setPRICE_UNIT("TL");
@@ -146,7 +146,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c12 = new Customer();
         c12.setNAME("havuc");
         c12.setBRAND("");
-        c12.setCATEGORY("Vegetables");
+        c12.setCATEGORY("Vegetable");
         c12.setInTheFridge(0);
         c12.setPRICE((float) 2.25);
         c12.setPRICE_UNIT("TL");
@@ -157,7 +157,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c13 = new Customer();
         c13.setNAME("biber");
         c13.setBRAND("");
-        c13.setCATEGORY("Vegetables");
+        c13.setCATEGORY("Vegetable");
         c13.setInTheFridge(0);
         c13.setPRICE((float) 1.25);
         c13.setPRICE_UNIT("TL");
@@ -168,7 +168,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c14 = new Customer();
         c14.setNAME("domates");
         c14.setBRAND("");
-        c14.setCATEGORY("Vegetables");
+        c14.setCATEGORY("Vegetable");
         c14.setInTheFridge(0);
         c14.setPRICE((float) 1.25);
         c14.setPRICE_UNIT("TL");
@@ -212,7 +212,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c18 = new Customer();
         c18.setNAME("hardal");
         c18.setBRAND("");
-        c18.setCATEGORY("Sauce");
+        c18.setCATEGORY("Junk Food");
         c18.setInTheFridge(0);
         c18.setPRICE((float) 9.25);
         c18.setPRICE_UNIT("TL");
@@ -234,7 +234,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c20 = new Customer();
         c20.setNAME("ketcap");
         c20.setBRAND("");
-        c20.setCATEGORY("Sauce");
+        c20.setCATEGORY("Junk Food");
         c20.setInTheFridge(0);
         c20.setPRICE((float) 5.25);
         c20.setPRICE_UNIT("TL");
@@ -267,7 +267,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c23 = new Customer();
         c23.setNAME("mayonez");
         c23.setBRAND("");
-        c23.setCATEGORY("Sauce");
+        c23.setCATEGORY("Junk Food");
         c23.setInTheFridge(0);
         c23.setPRICE((float) 6.25);
         c23.setPRICE_UNIT("TL");
@@ -355,7 +355,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c31 = new Customer();
         c31.setNAME("potato");
         c31.setBRAND("");
-        c31.setCATEGORY("Vegetables");
+        c31.setCATEGORY("Vegetable");
         c31.setInTheFridge(0);
         c31.setPRICE((float) 0.05);
         c31.setPRICE_UNIT("TL");
@@ -410,7 +410,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c36 = new Customer();
         c36.setNAME("hazelnut");
         c36.setBRAND("");
-        c36.setCATEGORY("Nut");
+        c36.setCATEGORY("Junk Food");
         c36.setInTheFridge(0);
         c36.setPRICE((float) 15.00);
         c36.setPRICE_UNIT("TL");
@@ -421,7 +421,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c37 = new Customer();
         c37.setNAME("peanut");
         c37.setBRAND("");
-        c37.setCATEGORY("Nut");
+        c37.setCATEGORY("Junk Food");
         c37.setInTheFridge(0);
         c37.setPRICE((float) 15.25);
         c37.setPRICE_UNIT("TL");
@@ -465,7 +465,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c41 = new Customer();
         c41.setNAME("hanimeller");
         c41.setBRAND("Ulker");
-        c41.setCATEGORY("junkfood");
+        c41.setCATEGORY("Junk Food");
         c41.setInTheFridge(0);
         c41.setPRICE((float) 5.00);
         c41.setPRICE_UNIT("TL");
@@ -476,7 +476,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c42 = new Customer();
         c42.setNAME("ruffles");
         c42.setBRAND("");
-        c42.setCATEGORY("junkfood");
+        c42.setCATEGORY("Junk Food");
         c42.setInTheFridge(0);
         c42.setPRICE((float) 5.25);
         c42.setPRICE_UNIT("TL");
@@ -487,7 +487,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c43 = new Customer();
         c43.setNAME("rocco");
         c43.setBRAND("");
-        c43.setCATEGORY("junkfood");
+        c43.setCATEGORY("Junk Food");
         c43.setInTheFridge(0);
         c43.setPRICE((float) 5.50);
         c43.setPRICE_UNIT("TL");
@@ -498,7 +498,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c44 = new Customer();
         c44.setNAME("canga");
         c44.setBRAND("");
-        c44.setCATEGORY("junkfood");
+        c44.setCATEGORY("Junk Food");
         c44.setInTheFridge(0);
         c44.setPRICE((float) 5.75);
         c44.setPRICE_UNIT("TL");
@@ -509,7 +509,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c45 = new Customer();
         c45.setNAME("toblerone");
         c45.setBRAND("");
-        c45.setCATEGORY("junkfood");
+        c45.setCATEGORY("Junk Food");
         c45.setInTheFridge(0);
         c45.setPRICE((float) 6.00);
         c45.setPRICE_UNIT("TL");
@@ -520,7 +520,7 @@ public class bootStrapData implements CommandLineRunner {
         Customer c46 = new Customer();
         c46.setNAME("toffie");
         c46.setBRAND("");
-        c46.setCATEGORY("junkfood");
+        c46.setCATEGORY("Junk Food");
         c46.setInTheFridge(0);
         c46.setPRICE((float) 6.25);
         c46.setPRICE_UNIT("TL");
