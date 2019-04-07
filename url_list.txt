@@ -1,0 +1,79 @@
+				URL LIST OF PRODUCT 
+Product table-a eklenmiş olan tüm ürünleri döner
+https://slothweb.herokuapp.com/product
+http://localhost:8080/product
+
+Product table-a eklenmiş olan ve id'ye sahip olan ürün döner
+https://slothweb.herokuapp.com/product/{id}
+http://localhost:8080/product/{id} id = id of product
+
+Product table-a eklenmiş olan ve çağırıldığı isme sahip olan ürün döner
+https://slothweb.herokuapp.com/product/name/{name}
+http://localhost:8080/product/name/{name} name = name of the product. As kola,yogurt , peynir
+
+isme sahip olan ürünü buzdolabına ekler
+https://slothweb.herokuapp.com/product/update/add/{name}
+http://localhost:8080/product/update/add/{name}
+
+isme sahip olan ürünü buzdolabından çıkarır
+https://slothweb.herokuapp.com/product/update/del/{name}
+http://localhost:8080/product/update/del/{name}
+
+Buzdolabında olan tüm ürünleri döner
+https://slothweb.herokuapp.com/product/fridge
+http://localhost:8080/product/fridge
+
+
+Product table-a ürün ekleme:
+https://slothweb.herokuapp.com/product
+http://localhost:8080/product
+
+url-lerine post request yolluyoruz.
+header olarak json ayarlanıyor. body olarak aşağıdaki json objesi verilerek ürün eklenebilir.
+
+{
+    "inTheFridge": 1,
+    "id": 4,
+    "name": "tavuk",
+    "brand": "banvit",
+    "category": "Hayvansal",
+    "price": 20,
+    "price_UNIT": "TL",
+    "physical_UNIT": "KG",
+    "first_DATE": 4444444
+}
+
+
+Product table-a id ile ürün çıkarma :
+https://slothweb.herokuapp.com/product/del/{id}
+http://localhost:8080/product/del/{id} id = id of product
+
+Method tipi olarak delete seçilir.
+
+				URL LIST OF ORDER
+				
+Server-da olan tüm orderlar liste olarak döner.
+https://slothweb.herokuapp.com/order
+http://localhost:8080/order
+
+Server-da olan id-ye sahip olan order döner.
+https://slothweb.herokuapp.com/order/{id} id = id of the order
+http://localhost:8080/order/{id} 
+
+Server-da olan id-ye sahip olan order silinir.
+https://slothweb.herokuapp.com/order/del/{id} id = id of the order
+http://localhost:8080/order/del/{id} 
+
+Order table-a order ekleme için post method atma.
+https://slothweb.herokuapp.com/order
+http://localhost:8080/order
+
+post methoda body olarak aiağıdaki json objesi verilir:
+
+{
+        "id": 1,
+        "date": 333333,
+        "quantity": 3,
+        "product_ID": 1
+    }
+	
